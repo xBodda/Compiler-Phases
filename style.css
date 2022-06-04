@@ -1,0 +1,25 @@
+body * {
+    font-family: courier;
+    margin: 0;
+}
+
+body {
+    padding: 5% 15%;
+}
+
+td {
+    horizontal-align: middle;
+    vertical-align: middle;
+}
+
+.tree td {
+    vertical-align: top;
+}
+
+#accepted {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #000;
+}

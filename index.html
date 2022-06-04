@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>First & Follow Set</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="all.js"></script>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <div>First & Follow Set</div>
+                    <textarea class="form-control" id="grammar" rows="10" cols="20" onchange="grammarChanged();">
+                    S -> a B D h
+                    B -> c C
+                    C -> b C
+                    C -> ''
+                    D -> E F
+                    E -> g
+                    E -> ''
+                    F -> f
+                    F -> ''
+                    </textarea>
+                </td>
+                <td>
+                    <div>
+                        <table border="1" class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr id="heading">
+                                    <th>FIRST</th>
+                                    <th>FOLLOW</th>
+                                    <th>Nonterminal</th>
+                                </tr>
+                            </thead>
+                            <tbody id="parsingData">
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Input : <input id="input" class="form-control" type="text" size="10" onkeyup="resize(this, 10);" onchange="parseInput();" value="a c h"></p>
+    <p><input type="button" class="btn btn-success" value="Check String!"></p>
+    <br>
+    <div id="accepted">
+
+    </div>
+</body>
+<script language="javascript">
+        grammarChanged();
+</script>
+</html>
